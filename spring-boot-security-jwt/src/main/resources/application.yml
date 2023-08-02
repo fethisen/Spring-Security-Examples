@@ -1,0 +1,25 @@
+server:
+  port : 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:54321/abcbank
+    username: postgres
+    password: postgres
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+security:
+  authentication:
+    jwt:
+      base64-secret: NGY5MjNlMjFkMWQ4MjQ0NWQ1ODhjZTA4ZjIxZjUyMGM5YzRjNDEwMmE4MzUwODFhNzNjNzE1YjA5OWUxZDZkZWU2ZWE5NDRhODhiYTIwNzc1MGZkNDk5ZmJmMTUzYmU0ODY1YzA1MjIxMzcwZWZiMmI0NDMxOTQ0NGY4MDQ4Y2Q=
+      # type of below values are seconds
+      token-validity-in-seconds: 3600
+      token-validity-in-seconds-for-remember-me: 777600
+
+
